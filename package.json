@@ -1,0 +1,16 @@
+{
+  "name": "typk",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "typk": "index.js"
+  },
+  "scripts": {
+    "start": "node index.js run"
+  },
+  "dependencies": {
+    "ink": "^4.4.1",
+    "react": "^18.2.0"
+  }
+}

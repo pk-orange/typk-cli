@@ -1,0 +1,15 @@
+{
+  "maxRowChar": 40,
+  "baseColor": "#000",
+  "passColor": "#4c566a",
+  "missColor": "yellow",
+  "failColor": "red",
+  "allowDelete": true,
+  "charCase": "default",
+  "caseSensitive": true,
+  "textAlign": "left",
+  "highlightRow": true,
+  "highlightRowColor": "#81a1c1",
+  "cursor": "underline",
+  "cursorColor": "white"
+}
