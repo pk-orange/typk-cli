@@ -7,7 +7,8 @@ import { LOREM_TEXT } from "./lib/constants.js";
 import { applyCharCase, loadConfig } from "./lib/config.js";
 import { parseArgs, printHelp } from "./lib/cli.js";
 import { TypkApp } from "./lib/app.js";
-import { loadTextFromFile } from "./lib/text.js";
+import { shuffleCommands } from "./lib/commands.js";
+import { loadInputFromFile } from "./lib/input.js";
 
 // Entry point: parse args first so we can exit cleanly without loading the app.
 const { command, filePath, errors } = parseArgs(process.argv.slice(2));
@@ -30,8 +31,21 @@ if (command !== "run") {
 }
 
 const config = loadConfig();
-const baseText = filePath ? loadTextFromFile(filePath) : LOREM_TEXT;
-const displayText = applyCharCase(baseText, config.charCase);
-const chars = Array.from(displayText);
+const input = filePath
+  ? await loadInputFromFile(filePath)
+  : { type: "text", text: LOREM_TEXT };
 
-render(React.createElement(TypkApp, { chars, config }));
+if (input.type === "commands") {
+  const commands = shuffleCommands(input.commands).map((command) => ({
+    ...command,
+    command: applyCharCase(command.command, config.charCase),
+    description: applyCharCase(command.description, config.charCase),
+  }));
+
+  render(React.createElement(TypkApp, { mode: "commands", commands, config }));
+} else {
+  const displayText = applyCharCase(input.text, config.charCase);
+  const chars = Array.from(displayText);
+
+  render(React.createElement(TypkApp, { mode: "text", chars, config }));
+}

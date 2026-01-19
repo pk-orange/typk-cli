@@ -11,5 +11,8 @@
   "highlightRow": true,
   "highlightRowColor": "#81a1c1",
   "cursor": "underline",
-  "cursorColor": "white"
+  "cursorColor": "white",
+  "commandsPerScreen": 1,
+  "displayTooltips": true,
+  "displayPauseTooltip": true
 }

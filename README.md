@@ -35,6 +35,22 @@ typk run --file /path/to/text.txt
 npx . run --file /path/to/text.txt
 ```
 
+Use a command deck (flashcards):
+
+```sh
+typk run --file inputs/commands/commands-git.js
+```
+
+Command deck files should export an array of:
+
+```js
+{
+  id: 1,
+  command: "git status",
+  description: "Show the working tree status"
+}
+```
+
 ## Configuration
 
 Create a `typk.config.json` in the directory where you run the command.
@@ -53,7 +69,10 @@ Create a `typk.config.json` in the directory where you run the command.
   "highlightRow": true,
   "highlightRowColor": "white",
   "cursor": "underline",
-  "cursorColor": "white"
+  "cursorColor": "white",
+  "commandsPerScreen": 1,
+  "displayTooltips": true,
+  "displayPauseTooltip": true
 }
 ```
 
@@ -62,6 +81,9 @@ Notes:
 - `charCase`: `lower`, `upper`, `default`.
 - `textAlign`: `left`, `center`, `right`.
 - `cursor`: `line`, `block`, `outline`, `underline`.
+- `commandsPerScreen`: how many command cards are visible at once.
+- `displayTooltips`: toggle the "Hit ENTER for next command" prompt.
+- `displayPauseTooltip`: toggle the "Hit ESC to pause" prompt.
 - Colors accept Ink color names or hex (e.g., `#ff9900`, `ff9900`, `0xff9900`).
 
 ## Stats
