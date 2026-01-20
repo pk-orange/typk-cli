@@ -43,6 +43,14 @@ if (input.type === "commands") {
   }));
 
   render(React.createElement(TypkApp, { mode: "commands", commands, config }));
+} else if (input.type === "api") {
+  render(
+    React.createElement(TypkApp, {
+      mode: "api",
+      apiFetcher: input.fetcher,
+      config,
+    }),
+  );
 } else {
   const displayText = applyCharCase(input.text, config.charCase);
   const chars = Array.from(displayText);
