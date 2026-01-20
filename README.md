@@ -1,4 +1,4 @@
-# typk
+# typk-cli
 
 A minimal CLI typing trainer built with Ink.
 
