@@ -2,7 +2,7 @@
 
 A minimal CLI typing trainer built with Ink.
 
-Nuilt to be a lightweight typing practice tool focused on learning through repetition. Designed for quick, on-demand sessions, it helps reinforce muscle memory while tracking performance over time to support measurable improvement.
+Built to be a lightweight typing practice tool focused on learning through repetition. Designed for quick, on-demand sessions, it helps reinforce muscle memory while tracking performance over time to support measurable improvement.
 
 ## Installation
 
