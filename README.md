@@ -50,24 +50,6 @@ npx . run --file /path/to/text.txt
 
 ## Input folders
 
-Typk treats inputs in `inputs/` differently based on the folder:
-
-Flash cards (`inputs/flash-cards/`):
-
-```sh
-typk run --file inputs/flash-cards/commands-git.js
-```
-
-Flash card files must export an array of:
-
-```js
-{
-  id: 1,
-  command: "git status",
-  description: "Show the working tree status"
-}
-```
-
 Fetch endpoints (`inputs/fetch/`):
 
 ```sh
