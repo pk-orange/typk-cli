@@ -3,7 +3,6 @@ import process from "process";
 import React from "react";
 import { render } from "ink";
 
-import { LOREM_TEXT } from "./lib/constants.js";
 import { applyCharCase, loadConfig } from "./lib/config.js";
 import { parseArgs, printHelp } from "./lib/cli.js";
 import { TypkApp } from "./lib/app.js";
@@ -33,7 +32,7 @@ if (command !== "run") {
 const config = loadConfig();
 const input = filePath
   ? await loadInputFromFile(filePath)
-  : { type: "text", text: LOREM_TEXT };
+  : await loadInputFromFile("inputs/fetch/api_random_fact.js");
 
 if (input.type === "commands") {
   const commands = shuffleCommands(input.commands).map((command) => ({
