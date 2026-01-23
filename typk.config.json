@@ -1,5 +1,5 @@
 {
-  "maxRowChar": 40,
+  "maxRowChar": 20,
   "baseColor": "#000",
   "passColor": "#4c566a",
   "missColor": "yellow",
@@ -12,7 +12,6 @@
   "highlightRowColor": "#81a1c1",
   "cursor": "underline",
   "cursorColor": "white",
-  "commandsPerScreen": 1,
   "displayTooltips": true,
   "displayPauseTooltip": true
 }
