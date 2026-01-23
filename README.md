@@ -27,8 +27,13 @@ node index.js run --file <file_path>
 Install globally to use the `typk` command:
 
 ```sh
+# Create global symlink
 npm link
+
+
+# Run the command
 typk run
+# or with local text file
 typk run --file <file_path>
 ```
 
