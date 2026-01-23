@@ -2,7 +2,7 @@
 
 A minimal CLI typing trainer built with Ink.
 
-Built to be a lightweight typing practice tool focused on learning through repetition. Designed for quick, on-demand sessions, it helps reinforce muscle memory while tracking performance over time to support measurable improvement.
+Designed for quick, on-demand sessions, it helps reinforce muscle memory while tracking performance over time to support measurable improvement.
 
 ## Installation
 
@@ -48,18 +48,6 @@ typk run --file /path/to/text.txt
 npx . run --file /path/to/text.txt
 ```
 
-## Input folders
-
-Fetch endpoints (`inputs/fetch/`):
-
-```sh
-typk run --file inputs/fetch/api_random_fact.js
-```
-
-Fetch files must export a function that returns a string (or an object with a
-`text` field). Typk shows one item at a time. After you finish typing, press
-ENTER to fetch another item or ESC to exit to stats.
-
 ## Configuration
 
 Create a `typk.config.json` in the directory where you run the command.
@@ -95,6 +83,31 @@ Notes:
 - Colors accept Ink color names or hex (e.g., `#ff9900`, `ff9900`, `0xff9900`).
 
 ## Stats
+
+```
+| ------------------------ |
+|          STATS           |
+| ------------------------ |
+| WPM              ###/### |
+| CPM              ###/### |
+| ACC                   #% |
+| TIME               ##:## |
+| ------------------------ |
+|         RESULTS          |
+| ------------------------ |
+| PASS                   # |
+| MISS                   # |
+| FAIL                   # |
+| ------------------------ |
+|        CHAR COUNT        |
+| ------------------------ |
+| CHAR                   # |
+| NON-CHAR               # |
+| DELETE                 # |
+| ------------------------ |
+| TOTAL                  # |
+| ------------------------ |
+```
 
 Typk tracks the following stats:
 
