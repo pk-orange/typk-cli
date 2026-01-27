@@ -64,6 +64,7 @@ Create a `typk.config.json` in the directory where you run the command.
   "passColor": "#2ecc71",
   "missColor": "#f1c40f",
   "failColor": "#e74c3c",
+  "dimUntyped": true,
   "allowDelete": true,
   "charCase": "default",
   "caseSensitive": true,
@@ -85,6 +86,7 @@ Notes:
 - `cursor`: `line`, `block`, `outline`, `underline`.
 - `displayTooltips`: toggle the "Hit ENTER for next command" prompt.
 - `displayPauseTooltip`: toggle the "Hit ESC to pause" prompt.
+- `dimUntyped`: toggle dimming of untyped characters.
 - Colors accept Ink color names or hex (e.g., `#ff9900`, `ff9900`, `0xff9900`).
 
 ## Stats
