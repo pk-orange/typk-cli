@@ -53,41 +53,6 @@ typk run --file /path/to/text.txt
 npx . run --file /path/to/text.txt
 ```
 
-## Configuration
-
-Create a `typk.config.json` in the directory where you run the command.
-
-```json
-{
-  "maxRowChar": 40,
-  "baseColor": "white",
-  "passColor": "white",
-  "missColor": "yellow",
-  "failColor": "red",
-  "dimUntyped": false,
-  "allowDelete": true,
-  "charCase": "default",
-  "caseSensitive": true,
-  "textAlign": "left",
-  "highlightRow": true,
-  "highlightRowColor": "cyan",
-  "cursor": "underline",
-  "cursorColor": "white",
-  "displayTooltips": true,
-  "displayPauseTooltip": true
-}
-```
-
-Notes:
-
-- `maxRowChar` is clamped to 20-60.
-- `charCase`: `lower`, `upper`, `default`.
-- `textAlign`: `left`, `center`, `right`.
-- `cursor`: `line`, `block`, `outline`, `underline`.
-- `displayTooltips`: toggle the "Hit ENTER for next command" prompt.
-- `displayPauseTooltip`: toggle the "Hit ESC to pause" prompt.
-- `dimUntyped`: toggle dimming of untyped characters.
-- Colors accept Ink color names or hex (e.g., `#ff9900`, `ff9900`, `0xff9900`).
 
 ## Stats
 
