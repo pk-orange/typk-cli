@@ -2,8 +2,6 @@
 
 A minimal CLI typing trainer built with Ink.
 
-Designed for quick, on-demand sessions, it helps reinforce muscle memory while tracking performance over time to support measurable improvement.
-
 ## Installation
 
 Requirements:
